@@ -5,6 +5,12 @@ Copyright (c) 2020 Black Rook Software.
 [Latest Release](https://github.com/BlackRookSoftware/GUI/releases/latest)
 
 
+### NOTICE
+
+This library is currently in **EXPERIMENTAL** status. This library's API
+may change many times in different ways over the course of its development!
+
+
 ### Required Libraries
 
 NONE
