@@ -699,10 +699,10 @@ public class GUI
 	 * If a mouse button is already pressed on an object, a DRAG event is sent to it, but only if it handles it.
 	 * A mouse move is also handled by the currently moused-over object.
 	 * <p>NOTE: This is not affected by viewport. You need to calculate that.
-	 * @param mouseX the amount of mouse movement, X-axis.
-	 * @param mouseY the amount of mouse movement, Y-axis.
+	 * @param mouseX the mouse position, X-axis.
+	 * @param mouseY the mouse position, Y-axis.
 	 */
-	public void sendMouseMove(int mouseX, int mouseY)
+	public void sendMousePosition(int mouseX, int mouseY)
 	{
 		updateMouseCoordinateFields(mouseX, mouseY);
 		updateMouseObjectEvents();
