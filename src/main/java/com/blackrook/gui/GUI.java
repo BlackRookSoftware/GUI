@@ -745,20 +745,20 @@ public class GUI
 	}
 
 	/**
-	 * Called to send a gamepad button press type event.
+	 * Called to send a joystick button press type event.
 	 * The button press is first broadcast, then sent to the currently-focused object. 
 	 * If this is handled by an existing broadcast event, it is still sent to the focused object.
-	 * @param gamepadId the game pad id.
-	 * @param gamepadButton the gamepad button.
+	 * @param joystickId the game pad id.
+	 * @param joystickButton the joystick button.
 	 * @return true if handled by a component, false if not.
 	 */
-	public boolean sendGamepadPress(int gamepadId, int gamepadButton)
+	public boolean sendGamepadPress(int joystickId, int joystickButton)
 	{
-		boolean handled = fireBroadcastGamepadButtonEvent(gamepadId, gamepadButton, false);
+		boolean handled = fireBroadcastGamepadButtonEvent(joystickId, joystickButton, false);
 
 		if (currentObjectFocus != null)
 		{
-			fireGamepadButtonEvent(currentObjectFocus, gamepadId, gamepadButton, false);
+			fireGamepadButtonEvent(currentObjectFocus, joystickId, joystickButton, false);
 			handled = true;
 		}
 		
@@ -766,20 +766,20 @@ public class GUI
 	}
 
 	/**
-	 * Called to send a gamepad button release type event.
+	 * Called to send a joystick button release type event.
 	 * The button release is first broadcast, then sent to the currently-focused object. 
 	 * If this is handled by an existing broadcast event, it is still sent to the focused object.
-	 * @param gamepadId the game pad id.
-	 * @param gamepadButton the gamepad button.
+	 * @param joystickId the game pad id.
+	 * @param joystickButton the joystick button.
 	 * @return true if handled by a component, false if not.
 	 */
-	public boolean sendGamepadRelease(int gamepadId, int gamepadButton)
+	public boolean sendGamepadRelease(int joystickId, int joystickButton)
 	{
-		boolean handled = fireBroadcastGamepadButtonEvent(gamepadId, gamepadButton, true);
+		boolean handled = fireBroadcastGamepadButtonEvent(joystickId, joystickButton, true);
 
 		if (currentObjectFocus != null)
 		{
-			fireGamepadButtonEvent(currentObjectFocus, gamepadId, gamepadButton, true);
+			fireGamepadButtonEvent(currentObjectFocus, joystickId, joystickButton, true);
 			handled = true;
 		}
 		
@@ -787,40 +787,40 @@ public class GUI
 	}
 
 	/**
-	 * Called to send a gamepad axis change type event.
+	 * Called to send a joystick axis change type event.
 	 * The axis change is only sent to the currently-focused object. 
-	 * @param gamepadId the game pad id.
-	 * @param gamepadAxisId the axis id.
+	 * @param joystickId the game pad id.
+	 * @param joystickAxisId the axis id.
 	 * @param value the axis value.
 	 * @return true if handled by a component, false if not.
 	 */
-	public boolean sendGamepadAxisChange(int gamepadId, int gamepadAxisId, float value)
+	public boolean sendGamepadAxisChange(int joystickId, int joystickAxisId, float value)
 	{
 		if (currentObjectFocus != null)
 		{
-			fireGamepadAxisEvent(currentObjectFocus, gamepadId, gamepadAxisId, value);
+			fireGamepadAxisEvent(currentObjectFocus, joystickId, joystickAxisId, value);
 			return true;
 		}
 		return false;
 	}
 
 	/**
-	 * Called to send a gamepad axis tap type event.
-	 * An "axis tap" is when a gamepad axis is brought from a value in its deadzone to outside of it.
+	 * Called to send a joystick axis tap type event.
+	 * An "axis tap" is when a joystick axis is brought from a value in its deadzone to outside of it.
 	 * The axis tap is first broadcast, then sent to the currently-focused object. 
 	 * If this is handled by an existing broadcast event, it is still sent to the focused object.
-	 * @param gamepadId the game pad id.
-	 * @param gamepadAxisId the axis id.
+	 * @param joystickId the game pad id.
+	 * @param joystickAxisId the axis id.
 	 * @param position the axis position (true = not in deadzone).
 	 * @return true if handled by a component, false if not.
 	 */
-	public boolean sendGamepadAxisTapPress(int gamepadId, int gamepadAxisId, boolean position)
+	public boolean sendGamepadAxisTapPress(int joystickId, int joystickAxisId, boolean position)
 	{
-		boolean handled = fireBroadcastGamepadTapEvent(gamepadId, gamepadAxisId, position, false);
+		boolean handled = fireBroadcastGamepadTapEvent(joystickId, joystickAxisId, position, false);
 
 		if (currentObjectFocus != null)
 		{
-			fireGamepadAxisTapEvent(currentObjectFocus, gamepadId, gamepadAxisId, position, false);
+			fireGamepadAxisTapEvent(currentObjectFocus, joystickId, joystickAxisId, position, false);
 			handled = true;
 		}
 		
@@ -828,22 +828,22 @@ public class GUI
 	}
 	
 	/**
-	 * Called to send a gamepad axis tap type event.
-	 * An "axis tap" is when a gamepad axis is brought from a value in its deadzone to outside of it.
+	 * Called to send a joystick axis tap type event.
+	 * An "axis tap" is when a joystick axis is brought from a value in its deadzone to outside of it.
 	 * The axis tap is first broadcast, then sent to the currently-focused object. 
 	 * If this is handled by an existing broadcast event, it is still sent to the focused object.
-	 * @param gamepadId the game pad id.
-	 * @param gamepadAxisId the axis id.
+	 * @param joystickId the game pad id.
+	 * @param joystickAxisId the axis id.
 	 * @param position the axis position (true = not in deadzone).
 	 * @return true if handled by a component, false if not.
 	 */
-	public boolean sendGamepadAxisTapRelease(int gamepadId, int gamepadAxisId, boolean position)
+	public boolean sendGamepadAxisTapRelease(int joystickId, int joystickAxisId, boolean position)
 	{
-		boolean handled = fireBroadcastGamepadTapEvent(gamepadId, gamepadAxisId, position, true);
+		boolean handled = fireBroadcastGamepadTapEvent(joystickId, joystickAxisId, position, true);
 
 		if (currentObjectFocus != null)
 		{
-			fireGamepadAxisTapEvent(currentObjectFocus, gamepadId, gamepadAxisId, position, true);
+			fireGamepadAxisTapEvent(currentObjectFocus, joystickId, joystickAxisId, position, true);
 			handled = true;
 		}
 		
@@ -1044,8 +1044,8 @@ public class GUI
 	}
 
 	/**
-	 * Fires a broadcast gamepad button event.
-	 * @param id the gamepad id used.
+	 * Fires a broadcast joystick button event.
+	 * @param id the joystick id used.
 	 * @param button the button used.
 	 * @param release true if release, false if not.
 	 * @return true if a broadcast event was handled, false if not.
@@ -1071,8 +1071,8 @@ public class GUI
 	}
 
 	/**
-	 * Fires a broadcast gamepad axis tap event.
-	 * @param id the gamepad id used.
+	 * Fires a broadcast joystick axis tap event.
+	 * @param id the joystick id used.
 	 * @param axisId the axis used.
 	 * @param positive true if axis tap was in a "positive" valued direction, false if not.
 	 * @param release true if release, false if not.
@@ -1322,13 +1322,13 @@ public class GUI
 	}
 
 	/**
-	 * Fires a gamepad button pressed event to an object.
+	 * Fires a joystick button pressed event to an object.
 	 * @param object the object central to the event.
-	 * @param gamepadId the gamepad id.
-	 * @param buttonCode the gamepad button code.
+	 * @param joystickId the joystick id.
+	 * @param buttonCode the joystick button code.
 	 * @param release true if a release, false if not.
 	 */
-	private void fireGamepadButtonEvent(GUIObject object, int gamepadId, int buttonCode, boolean release)
+	private void fireGamepadButtonEvent(GUIObject object, int joystickId, int buttonCode, boolean release)
 	{
 		GUIEvent guiEvent = new GUIEvent();
 		guiEvent.setGUI(this);
@@ -1336,37 +1336,37 @@ public class GUI
 		guiEvent.setType(release ? GUIObject.EVENT_GAMEPAD_TAP_RELEASE : GUIObject.EVENT_GAMEPAD_TAP_PRESS);
 		guiEvent.setRelease(release);
 		guiEvent.setOrigin(Origin.INPUT);
-		guiEvent.setGamepadButton(gamepadId, buttonCode);
+		guiEvent.setGamepadButton(joystickId, buttonCode);
 		object.callEvent(guiEvent);
 	}
 
 	/**
-	 * Fires a gamepad axis change event to an object.
+	 * Fires a joystick axis change event to an object.
 	 * @param object the object central to the event.
-	 * @param gamepadId the gamepad id.
+	 * @param joystickId the joystick id.
 	 * @param axisTypeId the axis type id. 
 	 * @param value the value.
 	 */
-	private void fireGamepadAxisEvent(GUIObject object, int gamepadId, int axisTypeId, float value)
+	private void fireGamepadAxisEvent(GUIObject object, int joystickId, int axisTypeId, float value)
 	{
 		GUIEvent guiEvent = new GUIEvent();
 		guiEvent.setGUI(this);
 		guiEvent.setObject(object);
 		guiEvent.setType(GUIObject.EVENT_GAMEPAD_AXIS);
 		guiEvent.setOrigin(Origin.INPUT);
-		guiEvent.setGamepadAxes(gamepadId, axisTypeId, value);
+		guiEvent.setGamepadAxes(joystickId, axisTypeId, value);
 		object.callEvent(guiEvent);
 	}
 
 	/**
-	 * Fires a gamepad axis tap event to an object.
+	 * Fires a joystick axis tap event to an object.
 	 * @param object the object central to the event.
-	 * @param gamepadId the gamepad id.
+	 * @param joystickId the joystick id.
 	 * @param axisTypeId the axis type id. 
 	 * @param positive if true, positive, false if negative.
 	 * @param release true if a release, false if not.
 	 */
-	private void fireGamepadAxisTapEvent(GUIObject object, int gamepadId, int axisTypeId, boolean positive, boolean release)
+	private void fireGamepadAxisTapEvent(GUIObject object, int joystickId, int axisTypeId, boolean positive, boolean release)
 	{
 		GUIEvent guiEvent = new GUIEvent();
 		guiEvent.setGUI(this);
@@ -1374,7 +1374,7 @@ public class GUI
 		guiEvent.setType(release ? GUIObject.EVENT_GAMEPAD_TAP_RELEASE : GUIObject.EVENT_GAMEPAD_TAP_PRESS);
 		guiEvent.setRelease(release);
 		guiEvent.setOrigin(Origin.INPUT);
-		guiEvent.setGamepadAxisTap(gamepadId, axisTypeId, positive);
+		guiEvent.setGamepadAxisTap(joystickId, axisTypeId, positive);
 		object.callEvent(guiEvent);
 	}
 
