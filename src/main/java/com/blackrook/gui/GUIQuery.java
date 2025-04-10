@@ -64,7 +64,7 @@ public final class GUIQuery implements Iterable<GUIObject>
 			return false;
 		objectHash.add(object);
 		objectList.add(object);
-		for (String name : object.getNameHash())
+		for (String name : object.getNameSet())
 			nameMap.add(name, object);
 		return true;
 	}
@@ -733,7 +733,7 @@ public final class GUIQuery implements Iterable<GUIObject>
 	/**
 	 * Gets the color on the first object in this query result.
 	 * If the set is empty, this returns null.
-	 * @return itself, in order to chain queries.
+	 * @return the color.
 	 */
 	public GUIColor getColor()
 	{
@@ -832,7 +832,7 @@ public final class GUIQuery implements Iterable<GUIObject>
 	/**
 	 * Gets the object bounds on the first object in this query result.
 	 * If the set is empty, this returns null.
-	 * @return a Rectangle4F containing the object bounds. If the contents of the Rectangle2F change,
+	 * @return a GUIBounds containing the object bounds. If the contents of the GUIBounds change,
 	 * it will not affect the object.
 	 */
 	public GUIBounds getBounds()
@@ -843,7 +843,7 @@ public final class GUIQuery implements Iterable<GUIObject>
 	/**
 	 * Gets the object absolute bounds on the first object in this query result.
 	 * If the set is empty, this returns null.
-	 * @return a Rectangle4F containing the object bounds. If the contents of the Rectangle2F change,
+	 * @return a GUIBounds containing the object bounds. If the contents of the GUIBounds change,
 	 * it will not affect the object.
 	 */
 	public GUIBounds getAbsoluteBounds()

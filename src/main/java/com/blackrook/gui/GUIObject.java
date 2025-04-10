@@ -1646,9 +1646,9 @@ public abstract class GUIObject
 	}
 
 	/** 
-	 * Gets a reference to the name hash.
+	 * Gets a reference to the name set.
 	 */
-	final Set<String> getNameHash()
+	final Set<String> getNameSet()
 	{
 		return names;
 	}

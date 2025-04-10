@@ -135,7 +135,7 @@ public class GUI
 		synchronized (objectsMutex)
 		{
 			allObjects.add(obj);
-			for (String n : obj.getNameHash())
+			for (String n : obj.getNameSet())
 				addObjectName(n, obj);
 			for (GUIObject child : obj.getChildren())
 			{
@@ -161,7 +161,7 @@ public class GUI
 		synchronized (objectsMutex)
 		{
 			allObjects.remove(obj);
-			for (String n : obj.getNameHash())
+			for (String n : obj.getNameSet())
 				removeObjectName(n, obj);
 			for (GUIObject child : obj.getChildren())
 			{
@@ -1354,7 +1354,7 @@ public class GUI
 		guiEvent.setObject(object);
 		guiEvent.setType(GUIObject.EVENT_GAMEPAD_AXIS);
 		guiEvent.setOrigin(Origin.INPUT);
-		guiEvent.setGamepadAxes(joystickId, axisTypeId, value);
+		guiEvent.setGamepadAxis(joystickId, axisTypeId, value);
 		object.callEvent(guiEvent);
 	}
 

@@ -531,7 +531,7 @@ public final class GUIEvent implements GUIInputConstants
 	 * @param gamepadAxisId the axis id.
 	 * @param value the new axis value.
 	 */
-	void setGamepadAxes(int gamepadId, int gamepadAxisId, float value)
+	void setGamepadAxis(int gamepadId, int gamepadAxisId, float value)
 	{
 		inputType = InputType.GAMEPAD_AXIS;
 		iarg0 = gamepadId;

@@ -60,8 +60,8 @@ public class GUITheme
 	}
 	
 	/**
-	 * Returns a skin associated with a theme key, 
-	 * or null if not a skin or none is associated.
+	 * Returns a texture associated with a theme key, 
+	 * or null if not a texture or none is associated.
 	 * @param key the key to use.
 	 * @return the corresponding texture name, or null if none found or if the value at this key is not a texture.
 	 */

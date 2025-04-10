@@ -137,7 +137,7 @@ public abstract class GUIAnimation implements Animation<GUIObject>
 		private float r1, g1, b1, a1;
 
 		/**
-		 * Creates a new GUI action that performs a color transition.
+		 * Creates a new animation that performs a color transition.
 		 */
 		private ColorAnim(float red, float green, float blue, float alpha)
 		{
@@ -186,7 +186,7 @@ public abstract class GUIAnimation implements Animation<GUIObject>
 		private float op1;
 
 		/**
-		 * Creates a new GUI action that performs an opacity transition.
+		 * Creates a new animation that performs an opacity transition.
 		 */
 		private OpacityAnim(float opacity)
 		{
@@ -221,7 +221,7 @@ public abstract class GUIAnimation implements Animation<GUIObject>
 		private Float x1, y1, width1, height1;
 
 		/**
-		 * Creates a new GUI action that performs a position transition.
+		 * Creates a new animation that performs a position transition.
 		 * @param x the new x-coordinate.
 		 * @param y the new y-coordinate.
 		 * @param width the new width.
@@ -274,7 +274,7 @@ public abstract class GUIAnimation implements Animation<GUIObject>
 		private boolean visible;
 
 		/**
-		 * Creates a new GUI action that sets visible state or not.
+		 * Creates a new animation that sets visible state or not.
 		 * @param visible the new state.
 		 */
 		private VisibleAnim(boolean visible)
@@ -368,7 +368,7 @@ public abstract class GUIAnimation implements Animation<GUIObject>
 		private float rotation1;
 		
 		/**
-		 * Creates a new Cinema action that sets rotation.
+		 * Creates a new animation that sets rotation.
 		 * @param rotation the new rotation.
 		 */
 		public RotationAnim(float rotation)
