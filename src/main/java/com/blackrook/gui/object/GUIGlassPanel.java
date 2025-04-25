@@ -50,10 +50,10 @@ public class GUIGlassPanel extends GUIPanel
 
 	/**
 	 * @return false, always, for this object.
-	 * @see GUIObject#isRendered()
+	 * @see GUIObject#getRendered()
 	 */
 	@Override
-	public boolean isRendered()
+	public boolean getRendered()
 	{
 		return false;
 	}

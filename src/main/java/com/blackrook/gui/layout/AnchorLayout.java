@@ -24,15 +24,15 @@ public class AnchorLayout implements GUILayout
 	
 	/* Reusable anchors. */
 	
-	private static Anchor TOP_LEFT_ANCHOR = new Anchor(0, UNUSED, 0, UNUSED);
-	private static Anchor TOP_CENTER_ANCHOR = new Anchor(AUTO, UNUSED, 0, UNUSED);
-	private static Anchor TOP_RIGHT_ANCHOR = new Anchor(UNUSED, 0, 0, UNUSED);
-	private static Anchor MIDDLE_LEFT_ANCHOR = new Anchor(0, UNUSED, AUTO, UNUSED);
-	private static Anchor CENTER_ANCHOR = new Anchor(AUTO, UNUSED, AUTO, UNUSED);
-	private static Anchor MIDDLE_RIGHT_ANCHOR = new Anchor(UNUSED, 0, AUTO, UNUSED);
-	private static Anchor BOTTOM_LEFT_ANCHOR = new Anchor(0, UNUSED, UNUSED, 0);
-	private static Anchor BOTTOM_CENTER_ANCHOR = new Anchor(AUTO, UNUSED, UNUSED, 0);
-	private static Anchor BOTTOM_RIGHT_ANCHOR = new Anchor(UNUSED, 0, UNUSED, 0);
+	private static final Anchor TOP_LEFT_ANCHOR = new Anchor(0, UNUSED, 0, UNUSED);
+	private static final Anchor TOP_CENTER_ANCHOR = new Anchor(AUTO, UNUSED, 0, UNUSED);
+	private static final Anchor TOP_RIGHT_ANCHOR = new Anchor(UNUSED, 0, 0, UNUSED);
+	private static final Anchor MIDDLE_LEFT_ANCHOR = new Anchor(0, UNUSED, AUTO, UNUSED);
+	private static final Anchor CENTER_ANCHOR = new Anchor(AUTO, UNUSED, AUTO, UNUSED);
+	private static final Anchor MIDDLE_RIGHT_ANCHOR = new Anchor(UNUSED, 0, AUTO, UNUSED);
+	private static final Anchor BOTTOM_LEFT_ANCHOR = new Anchor(0, UNUSED, UNUSED, 0);
+	private static final Anchor BOTTOM_CENTER_ANCHOR = new Anchor(AUTO, UNUSED, UNUSED, 0);
+	private static final Anchor BOTTOM_RIGHT_ANCHOR = new Anchor(UNUSED, 0, UNUSED, 0);
 	
 	@Override
 	public void resizeChild(GUIObject object, int index, int childTotal)
@@ -210,10 +210,10 @@ public class AnchorLayout implements GUILayout
 	 */
 	public static class Anchor
 	{
-		private float left;
-		private float right;
-		private float top;
-		private float bottom;
+		private final float left;
+		private final float right;
+		private final float top;
+		private final float bottom;
 		
 		private Anchor(float left, float right, float top, float bottom)
 		{

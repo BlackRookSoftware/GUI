@@ -10,7 +10,6 @@ package com.blackrook.gui.group;
 import java.util.Arrays;
 
 import com.blackrook.gui.GUIAction;
-import com.blackrook.gui.GUIEvent;
 import com.blackrook.gui.GUIObject;
 import com.blackrook.gui.object.GUIToggleable;
 
@@ -41,14 +40,7 @@ public class ToggleGroup
 	 */
 	public ToggleGroup(Iterable<GUIObject> objects)
 	{
-		GUIAction action = new GUIAction()
-		{
-			@Override
-			public void call(GUIEvent event)
-			{
-				toggle(event.getObject());
-			}
-		};
+		GUIAction action = (event) -> toggle(event.getObject());
 			
 		for (GUIObject obj : objects)
 			obj.bindAction(action, GUIToggleable.EVENT_VALUE_CHANGE);

@@ -8,7 +8,6 @@
 package com.blackrook.gui.object;
 
 import com.blackrook.gui.GUIAction;
-import com.blackrook.gui.GUIEvent;
 import com.blackrook.gui.GUIInputConstants;
 import com.blackrook.gui.model.IndexedModel;
 
@@ -25,44 +24,39 @@ public class GUICycler<T> extends GUILabel implements GUIValueField<T>, GUISelec
 	/** The current choice index. */
 	protected int currentIndex;
 	
-	protected static final GUIAction BASIC_ACTION = new GUIAction()
+	protected static final GUIAction BASIC_ACTION = (event) ->
 	{
-		@Override
-		public void call(GUIEvent event)
+		GUICycler<?> obj = (GUICycler<?>)event.getObject();
+		
+		if (event.isMouseEvent())
 		{
-			GUICycler<?> obj = (GUICycler<?>)event.getObject();
-			
-			if (event.isMouseEvent())
+			if (event.getMouseButton() == GUIInputConstants.MOUSE_LEFT)
+				obj.advanceSelection();
+		}
+		else if (event.isKeyboardEvent())
+		{
+			int keyCode = event.getKeyCode();
+			if (keyCode == GUIInputConstants.KEY_RIGHT)
+				obj.advanceSelection();
+			else if (keyCode == GUIInputConstants.KEY_LEFT)
+				obj.reverseSelection();
+		}
+		else if (event.isGamepadEvent())
+		{
+			if (event.getGamepadButton() == GUIInputConstants.GAMEPAD_1)
+				obj.advanceSelection();
+			else if (event.getGamepadButton() == GUIInputConstants.GAMEPAD_2)
+				obj.reverseSelection();
+		}
+		else if (event.isGamepadAxisTapEvent())
+		{
+			if (event.getGamepadAxisId() == GUIInputConstants.AXIS_X) // also = XBOX LEFT STICK X
 			{
-				if (event.getMouseButton() == GUIInputConstants.MOUSE_LEFT)
+				if (event.getGamepadAxisTapValue())
 					obj.advanceSelection();
-			}
-			else if (event.isKeyboardEvent())
-			{
-				int keyCode = event.getKeyCode();
-				if (keyCode == GUIInputConstants.KEY_RIGHT)
-					obj.advanceSelection();
-				else if (keyCode == GUIInputConstants.KEY_LEFT)
+				else
 					obj.reverseSelection();
 			}
-			else if (event.isGamepadEvent())
-			{
-				if (event.getGamepadButton() == GUIInputConstants.GAMEPAD_1)
-					obj.advanceSelection();
-				else if (event.getGamepadButton() == GUIInputConstants.GAMEPAD_2)
-					obj.reverseSelection();
-			}
-			else if (event.isGamepadAxisTapEvent())
-			{
-				if (event.getGamepadAxisId() == GUIInputConstants.AXIS_X) // also = XBOX LEFT STICK X
-				{
-					if (event.getGamepadAxisTapValue())
-						obj.advanceSelection();
-					else
-						obj.reverseSelection();
-				}
-			}
-			
 		}
 	};
 		

@@ -92,7 +92,7 @@ public class CardLayout implements GUILayout
 			activeCard != null 
 			? activeCard.equals(object.getLayoutAttrib().toString()) 
 			: index == activeIndex
-			);
+		);
 	}
 	
 }

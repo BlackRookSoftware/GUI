@@ -513,10 +513,10 @@ public abstract class GUIObject
 	// Tests if this object should be rendered anyway.
 	private boolean isAddedToRenderSet()
 	{
-		return isRendered() 
+		return getRendered() 
 			&& objectBounds.width > 0
 			&& objectBounds.height > 0
-			&& color.getAlpha() != 0.0f
+			&& getRenderAlpha() != 0.0f
 		;
 	}
 
@@ -1151,13 +1151,23 @@ public abstract class GUIObject
 	}
 
 	/**
+	 * Gets if this object is flagged as "visible".
+	 * This differs from {@link #isVisible()} as this is not a calculated value.
+	 * @return true, if this particular object is flagged as visible, false otherwise.
+	 */
+	public boolean getVisible()
+	{
+		return visible;
+	}
+	
+	/**
 	 * Gets if this object is rendered.
 	 * The object's children can still be rendered.
 	 * Unlike {@link #isVisible()}, this is not
 	 * hierarchically significant ("rendered" affects this and ONLY this object).
 	 * @return true if so, false if not.
 	 */
-	public boolean isRendered()
+	public boolean getRendered()
 	{
 		return rendered;
 	}
@@ -1730,15 +1740,14 @@ public abstract class GUIObject
 		sb.append(' ');
 		sb.append(String.format("RGBA(%.03f, %.03f, %.03f, %.03f) O: %.03f", 
 			color.getRed(), color.getGreen(), color.getBlue(), color.getAlpha(), opacity));
-		sb.append(' ');
 		if (!isEnabled())
-			sb.append("DISABLED").append(' ');
+			sb.append(' ').append("DISABLED");
 		if (!isVisible())
-			sb.append("INVISIBLE").append(' ');
+			sb.append(' ').append("INVISIBLE");
 		if (getLayout() != null)
-			sb.append(getLayout().getClass().getSimpleName()).append(' ');
+			sb.append(' ').append(getLayout().getClass().getSimpleName());
 		if (getLayoutAttrib() != null)
-			sb.append(getLayoutAttrib().getClass().getSimpleName()).append(' ');
+			sb.append(' ').append(getLayoutAttrib().getClass().getSimpleName());
 		return sb.toString();
 	}
 	
