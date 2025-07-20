@@ -15,45 +15,45 @@ import com.blackrook.gui.struct.MathUtils;
  */
 public class GUIColor
 {
-    public static final GUIColor 
-    // color hues/components.
+	public static final GUIColor 
+	// color hues/components.
 
-    // grays.
-    WHITE = 			new GUIColor(1.0f, 1.0f, 1.0f, 1.0f, true),
-    LIGHT_GRAY = 		new GUIColor(0.75f, 0.75f, 0.75f, 1.0f, true),
-    GRAY = 				new GUIColor(0.5f, 0.5f, 0.5f, 1.0f, true),
-    DARK_GRAY = 		new GUIColor(0.25f, 0.25f, 0.25f, 1.0f, true),
-    BLACK = 			new GUIColor(0.0f, 0.0f, 0.0f, 1.0f, true),
-    
-    // primaries, secondaries, tertiaries.
-    RED = 				new GUIColor(1.0f, 0.0f, 0.0f, 1.0f, true),
-    GREEN = 			new GUIColor(0.0f, 1.0f, 0.0f, 1.0f, true),
-    BLUE = 				new GUIColor(0.0f, 0.0f, 1.0f, 1.0f, true),
-    
-    YELLOW = 			new GUIColor(1.0f, 1.0f, 0.0f, 1.0f, true),
-    CYAN = 				new GUIColor(0.0f, 1.0f, 1.0f, 1.0f, true),
-    MAGENTA = 			new GUIColor(1.0f, 0.0f, 1.0f, 1.0f, true),
-    
-    ORANGE = 			new GUIColor(1.0f, 0.5f, 0.0f, 1.0f, true),
-    CHARTREUSE = 		new GUIColor(0.5f, 1.0f, 0.0f, 1.0f, true),
-    TEAL = 				new GUIColor(0.0f, 1.0f, 0.5f, 1.0f, true),
-    AQUAMARINE = 		new GUIColor(0.0f, 0.5f, 1.0f, 1.0f, true),
-    VIOLET = 			new GUIColor(0.5f, 0.0f, 1.0f, 1.0f, true),
-    FUSCHIA = 			new GUIColor(1.0f, 0.0f, 0.5f, 1.0f, true),
-
-    // other colors
-    GARNET = 			new GUIColor(0.5f, 0.0f, 0.0f, 1.0f, true),
-    AMBER = 			new GUIColor(0.5f, 0.5f, 0.0f, 1.0f, true),
-    PINE = 				new GUIColor(0.0f, 0.5f, 0.0f, 1.0f, true),
-    SEA_GREEN = 		new GUIColor(0.0f, 0.5f, 0.5f, 1.0f, true),
-    NAVY = 				new GUIColor(0.0f, 0.0f, 0.5f, 1.0f, true),
-    ROYAL_PURPLE =		new GUIColor(0.5f, 0.0f, 0.5f, 1.0f, true),
-    
-    LUMINANCE_BIAS =	new GUIColor(0.3f, 0.59f, 0.11f, 1.0f, true);
+	// grays.
+	WHITE = 			new GUIColor(1.0f, 1.0f, 1.0f, 1.0f, true),
+	LIGHT_GRAY = 		new GUIColor(0.75f, 0.75f, 0.75f, 1.0f, true),
+	GRAY = 				new GUIColor(0.5f, 0.5f, 0.5f, 1.0f, true),
+	DARK_GRAY = 		new GUIColor(0.25f, 0.25f, 0.25f, 1.0f, true),
+	BLACK = 			new GUIColor(0.0f, 0.0f, 0.0f, 1.0f, true),
 	
-    /** Flagged as read-only? */
-    private boolean readonly;
-    
+	// primaries, secondaries, tertiaries.
+	RED = 				new GUIColor(1.0f, 0.0f, 0.0f, 1.0f, true),
+	GREEN = 			new GUIColor(0.0f, 1.0f, 0.0f, 1.0f, true),
+	BLUE = 				new GUIColor(0.0f, 0.0f, 1.0f, 1.0f, true),
+	
+	YELLOW = 			new GUIColor(1.0f, 1.0f, 0.0f, 1.0f, true),
+	CYAN = 				new GUIColor(0.0f, 1.0f, 1.0f, 1.0f, true),
+	MAGENTA = 			new GUIColor(1.0f, 0.0f, 1.0f, 1.0f, true),
+	
+	ORANGE = 			new GUIColor(1.0f, 0.5f, 0.0f, 1.0f, true),
+	CHARTREUSE = 		new GUIColor(0.5f, 1.0f, 0.0f, 1.0f, true),
+	TEAL = 				new GUIColor(0.0f, 1.0f, 0.5f, 1.0f, true),
+	AQUAMARINE = 		new GUIColor(0.0f, 0.5f, 1.0f, 1.0f, true),
+	VIOLET = 			new GUIColor(0.5f, 0.0f, 1.0f, 1.0f, true),
+	FUSCHIA = 			new GUIColor(1.0f, 0.0f, 0.5f, 1.0f, true),
+
+	// other colors
+	GARNET = 			new GUIColor(0.5f, 0.0f, 0.0f, 1.0f, true),
+	AMBER = 			new GUIColor(0.5f, 0.5f, 0.0f, 1.0f, true),
+	PINE = 				new GUIColor(0.0f, 0.5f, 0.0f, 1.0f, true),
+	SEA_GREEN = 		new GUIColor(0.0f, 0.5f, 0.5f, 1.0f, true),
+	NAVY = 				new GUIColor(0.0f, 0.0f, 0.5f, 1.0f, true),
+	ROYAL_PURPLE =		new GUIColor(0.5f, 0.0f, 0.5f, 1.0f, true),
+	
+	LUMINANCE_BIAS =	new GUIColor(0.3f, 0.59f, 0.11f, 1.0f, true);
+	
+	/** Flagged as read-only? */
+	private boolean readonly;
+	
 	/** The red component. */
 	private float red;
 	/** The green component. */
