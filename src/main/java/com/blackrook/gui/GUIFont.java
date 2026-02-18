@@ -281,7 +281,7 @@ public class GUIFont implements GUIFontType
 
 	/**
 	 * Reads in XML-Formatted BM Font (http://www.angelcode.com/products/bmfont/) generated metadata
-	 * and creates an OGLGUIFont using the data.
+	 * and creates an GUIFont using the data.
 	 * @param file the file that holds the XML data.
 	 * @param texture the texture used for this font.
 	 * @return the created font.
@@ -297,7 +297,7 @@ public class GUIFont implements GUIFontType
 	
 	/**
 	 * Reads in XML-Formatted BM Font (http://www.angelcode.com/products/bmfont/) generated metadata
-	 * and creates an OGLGUIFont using the data.
+	 * and creates an GUIFont using the data.
 	 * @param in the input stream for the XML data.
 	 * @param texture the texture used for this font.
 	 * @return the created font.

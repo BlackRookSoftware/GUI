@@ -1241,8 +1241,8 @@ public abstract class GUIObject
 
 	/**
 	 * Gets this object wrapped in an {@link GUIQuery}.
-	 * Convenience method for <code>OGLGUIQuery.wrap(this)</code>.
-	 * @return a new OGLGUIQuery with this object in it.
+	 * Convenience method for <code>GUIQuery.wrap(this)</code>.
+	 * @return a new GUIQuery with this object in it.
 	 */
 	public GUIQuery getAsQuery()
 	{
@@ -1251,8 +1251,8 @@ public abstract class GUIObject
 
 	/**
 	 * Gets this object's parent wrapped in an {@link GUIQuery}.
-	 * Convenience method for <code>OGLGUIQuery.wrap(this.getParent())</code>.
-	 * @return a new OGLGUIQuery with this object's parent in it.
+	 * Convenience method for <code>GUIQuery.wrap(this.getParent())</code>.
+	 * @return a new GUIQuery with this object's parent in it.
 	 */
 	public GUIQuery getParentAsQuery()
 	{
@@ -1261,7 +1261,7 @@ public abstract class GUIObject
 	
 	/**
 	 * Gets this object's children wrapped in an {@link GUIQuery}.
-	 * @return a new OGLGUIQuery with this object's children in it.
+	 * @return a new GUIQuery with this object's children in it.
 	 */
 	public GUIQuery getChildrenAsQuery()
 	{
@@ -1270,7 +1270,7 @@ public abstract class GUIObject
 
 	/**
 	 * Gets this object's entire descendant tree wrapped in an {@link GUIQuery}.
-	 * @return a new OGLGUIQuery with this object's descendants in it.
+	 * @return a new GUIQuery with this object's descendants in it.
 	 */
 	public GUIQuery getDescendantsAsQuery()
 	{
@@ -1279,7 +1279,7 @@ public abstract class GUIObject
 
 	/**
 	 * Gets this object's siblings wrapped in an {@link GUIQuery}.
-	 * @return a new OGLGUIQuery with this object's siblings in it.
+	 * @return a new GUIQuery with this object's siblings in it.
 	 */
 	public GUIQuery getSiblingsAsQuery()
 	{

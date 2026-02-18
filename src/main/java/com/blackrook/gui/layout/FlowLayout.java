@@ -18,7 +18,7 @@ import com.blackrook.gui.GUIObject;
 import com.blackrook.gui.object.GUIGlassPanel;
 
 /**
- * A layout for OGLGUIObjects that sets the position of its components inside
+ * A layout for GUIObjects that sets the position of its components inside
  * the parent. This does not resize components.
  * @author Matthew Tropiano
  */

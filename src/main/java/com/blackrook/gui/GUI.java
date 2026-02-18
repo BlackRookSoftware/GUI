@@ -83,7 +83,7 @@ public class GUI
 	private boolean dirty;
 
 	/**
-	 * Creates a new OGLGUI instance.
+	 * Creates a new GUI instance.
 	 */
 	public GUI()
 	{

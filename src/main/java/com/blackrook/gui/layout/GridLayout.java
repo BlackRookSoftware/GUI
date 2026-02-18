@@ -12,7 +12,7 @@ import com.blackrook.gui.GUILayout;
 import com.blackrook.gui.GUIObject;
 
 /**
- * A border layout for OGLGUIObjects similar to {@link java.awt.GridLayout}.
+ * A border layout for GUIObjects similar to {@link java.awt.GridLayout}.
  * @author Matthew Tropiano
  */
 public class GridLayout implements GUILayout

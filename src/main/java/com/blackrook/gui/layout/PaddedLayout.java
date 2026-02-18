@@ -12,7 +12,7 @@ import com.blackrook.gui.GUILayout;
 import com.blackrook.gui.GUIObject;
 
 /**
- * A layout for OGLGUIObjects that resizes its children to its parent,
+ * A layout for GUIObjects that resizes its children to its parent,
  * with padded space around its edges, defined in screen units. If
  * the units are a value less than one, it is treated as a percentage
  * of the associated axis's width (or height).

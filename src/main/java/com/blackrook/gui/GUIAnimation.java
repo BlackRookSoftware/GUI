@@ -120,7 +120,7 @@ public abstract class GUIAnimation implements Animation<GUIObject>
 
 	/**
 	 * Creates a new GUI animation that calls an action on the object.
-	 * @param action the OGLGUIAction to call.
+	 * @param action the GUIAction to call.
 	 * @return the created animation.
 	 */
 	public static GUIAnimation action(GUIAction action)
