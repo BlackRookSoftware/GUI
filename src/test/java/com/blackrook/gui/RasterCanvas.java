@@ -1,9 +1,7 @@
 /*******************************************************************************
- * Copyright (c) 2014-2020 Black Rook Software
- * This program and the accompanying materials are made available under the 
- * terms of the GNU Lesser Public License v2.1 which accompanies this 
- * distribution, and is available at
- * http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
+ * Copyright (c) 2019-2020 Black Rook Software
+ * This program and the accompanying materials are made available under 
+ * the terms of the MIT License, which accompanies this distribution.
  ******************************************************************************/
 package com.blackrook.gui;
 
@@ -201,31 +199,33 @@ public class RasterCanvas extends Canvas
 		}
 		
 		canvasBuffer = recreateVolatileImage(canvasBuffer, getWidth(), getHeight(), Transparency.OPAQUE);
+		if (canvasBuffer != null)
+		{
+			Dimension size = REUSED_DIMENSION.get();
+			Rectangle imageBounds = REUSED_RECTANGLE.get();
+			
+			size.width = getWidth();
+			size.height = getHeight();
 
-		Dimension size = REUSED_DIMENSION.get();
-		Rectangle imageBounds = REUSED_RECTANGLE.get();
-		
-		size.width = getWidth();
-		size.height = getHeight();
-
-		getRenderedCanvasDimensions(size, imageBounds);
-		
-		Graphics2D g2d = (Graphics2D)canvasBuffer.getGraphics();
-		g2d.setColor(clearColor);
-		g2d.fillRect(0, 0, getWidth(), getHeight());
-		
-		RenderingHints hints = g2d.getRenderingHints();
-		
-		if (resamplingType == null)
-			ResamplingType.NEAREST.setHints(g2d);
-		else
-			resamplingType.setHints(g2d);
-		
-		g2d.setRenderingHints(hints);
-		
-		g2d.drawImage(writableBuffer, imageBounds.x, imageBounds.y, imageBounds.width, imageBounds.height, null);
-		g2d.dispose();
-		repaint();
+			getRenderedCanvasDimensions(size, imageBounds);
+			
+			Graphics2D g2d = (Graphics2D)canvasBuffer.getGraphics();
+			g2d.setColor(clearColor);
+			g2d.fillRect(0, 0, getWidth(), getHeight());
+			
+			RenderingHints hints = g2d.getRenderingHints();
+			
+			if (resamplingType == null)
+				ResamplingType.NEAREST.setHints(g2d);
+			else
+				resamplingType.setHints(g2d);
+			
+			g2d.setRenderingHints(hints);
+			
+			g2d.drawImage(writableBuffer, imageBounds.x, imageBounds.y, imageBounds.width, imageBounds.height, null);
+			g2d.dispose();
+			repaint();
+		}
 	}
 	
 	/**
