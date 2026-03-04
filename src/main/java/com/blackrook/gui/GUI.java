@@ -874,6 +874,7 @@ public class GUI
 			while (it.hasNext())
 			{
 				Map.Entry<GUIObject, AnimationQueue<GUIObject>> entry = it.next();
+				entry.getValue().update(timeslice);
 				if (entry.getValue().isDone())
 					it.remove();
 			}
