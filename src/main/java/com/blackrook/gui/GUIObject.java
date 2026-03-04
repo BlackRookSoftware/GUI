@@ -1522,7 +1522,7 @@ public abstract class GUIObject
 
 	/**
 	 * Enqueues an animation on this GUI Object, linear transition.
-	 * @param duration the duration of the action in milliseconds.
+	 * @param duration the duration of the action in time units.
 	 * @param animations the animations to perform (at once) for this animation.
 	 * @return itself, to chain calls.
 	 */
@@ -1534,7 +1534,7 @@ public abstract class GUIObject
 
 	/**
 	 * Enqueues an animation on this GUI Object.
-	 * @param duration the duration of the action in milliseconds.
+	 * @param duration the duration of the action in time units.
 	 * @param transition the transition type for the action.
 	 * @param animations the animations to perform (at once) for this animation.
 	 * @return itself, to chain calls.
@@ -1548,7 +1548,7 @@ public abstract class GUIObject
 
 	/**
 	 * Enqueues a delay between animations on this GUI Object.
-	 * @param duration the duration of the action in milliseconds.
+	 * @param duration the duration of the action in time units.
 	 * @return itself, to chain calls.
 	 */
 	public GUIObject animateDelay(long duration)

@@ -182,7 +182,7 @@ public class GUI
 	/**
 	 * Adds an action to the action queue.
 	 * @param object the object that called this request.
-	 * @param duration the duration of the actions in milliseconds.
+	 * @param duration the duration of the actions in time units.
 	 * @param type the transition/easing type.
 	 * @param actions the action to add.
 	 */
@@ -1568,7 +1568,7 @@ public class GUI
 	{
 		/** Object reference. */
 		protected G object;
-		/** Animation duration in milliseconds. */
+		/** Animation duration in time units. */
 		protected long duration;
 		/** Animation easing type. */
 		protected GUIEasingType easing;

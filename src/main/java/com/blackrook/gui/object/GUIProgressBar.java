@@ -158,7 +158,7 @@ public class GUIProgressBar<T extends Object> extends GUIGlassPanel implements G
 	
 	/** Transition type. */
 	protected GUIEasingType transitionType;
-	/** Transition time (milliseconds). */
+	/** Transition time (time units). */
 	protected long transitionTime;
 	/** Rectangle to use for bounds in transitions. */
 	private GUIBounds transRectangle;

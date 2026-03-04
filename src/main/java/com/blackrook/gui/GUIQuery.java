@@ -1058,7 +1058,7 @@ public final class GUIQuery implements Iterable<GUIObject>
 
 	/**
 	 * Enqueues an animation on this GUI Object, linear transition.
-	 * @param duration the duration of the action in milliseconds.
+	 * @param duration the duration of the action in time units.
 	 * @param animations the animations to perform (at once) for this animation.
 	 * @return itself, in order to chain queries.
 	 */
@@ -1069,7 +1069,7 @@ public final class GUIQuery implements Iterable<GUIObject>
 
 	/**
 	 * Enqueues an animation on this GUI Object.
-	 * @param duration the duration of the action in milliseconds.
+	 * @param duration the duration of the action in time units.
 	 * @param transition the transition type for the action.
 	 * @param animations the animations to perform (at once) for this animation.
 	 * @return itself, in order to chain queries.
@@ -1088,7 +1088,7 @@ public final class GUIQuery implements Iterable<GUIObject>
 	 * will receive 0 delay, but the next will receive 200ms, then the next will
 	 * get 400ms, then the next 600ms, and so on.
 	 * @param cumulativeDelay the cumulative delay to add to each object beyond the first.
-	 * @param duration the duration of the action in milliseconds.
+	 * @param duration the duration of the action in time units.
 	 * @param animations the animations to perform (at once) for this animation.
 	 * @return itself, in order to chain queries.
 	 */
@@ -1104,7 +1104,7 @@ public final class GUIQuery implements Iterable<GUIObject>
 	 * will receive 0 delay, but the next will receive 200ms, then the next will
 	 * get 400ms, then the next 600ms, and so on.
 	 * @param cumulativeDelay the cumulative delay to add to each object beyond the first.
-	 * @param duration the duration of the action in milliseconds.
+	 * @param duration the duration of the action in time units.
 	 * @param transition the transition type for the action.
 	 * @param animations the animations to perform (at once) for this animation.
 	 * @return itself, in order to chain queries.
@@ -1123,7 +1123,7 @@ public final class GUIQuery implements Iterable<GUIObject>
 
 	/**
 	 * Enqueues a delay between animations on this GUI Object.
-	 * @param duration the duration of the action in milliseconds.
+	 * @param duration the duration of the action in time units.
 	 * @return itself, in order to chain queries.
 	 */
 	public GUIQuery animateDelay(long duration)
