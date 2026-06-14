@@ -16,6 +16,7 @@ import com.blackrook.gui.GUIInputConstants;
  * If this button is set, it will not be unset on input.
  * <p>
  * <table>
+ * <caption>Radio button Themes</caption>
  * <tr>
  * 		<td>Checked, Enabled</td>
  * 		<td>{@link GUIRadioButton#THEME_KEY_RADIO_ON}</td>

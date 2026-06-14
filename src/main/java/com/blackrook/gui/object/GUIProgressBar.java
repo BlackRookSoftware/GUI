@@ -30,6 +30,7 @@ import com.blackrook.gui.model.RangeModel;
  * <p>
  * <b>Thumb:</b>
  * <table>
+ * <caption>Progressbar Themes</caption>
  * <tr>
  * 		<td>Horizontal</td>
  * 		<td>{@link GUIProgressBar#THEME_KEY_PROGRESS_THUMB_HORIZONTAL}</td>
@@ -50,6 +51,7 @@ import com.blackrook.gui.model.RangeModel;
  * <p>
  * <b>Full Bar:</b>
  * <table>
+ * <caption>Progressbar Themes</caption>
  * <tr>
  * 		<td>Horizontal</td>
  * 		<td>{@link GUIProgressBar#THEME_KEY_PROGRESS_FULL_HORIZONTAL}</td>
@@ -70,6 +72,7 @@ import com.blackrook.gui.model.RangeModel;
  * <p>
  * <b>Empty Bar:</b>
  * <table>
+ * <caption>Progressbar Themes</caption>
  * <tr>
  * 		<td>Horizontal</td>
  * 		<td>{@link GUIProgressBar#THEME_KEY_PROGRESS_EMPTY_HORIZONTAL}</td>

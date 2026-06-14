@@ -29,6 +29,7 @@ import com.blackrook.gui.struct.MathUtils;
  * <p>
  * <b>Thumb:</b>
  * <table>
+ * <caption>Slider Themes</caption>
  * <tr>
  * 		<td>Enabled</td>
  * 		<td>{@link GUISlider#THEME_KEY_SLIDER_THUMB}</td>
@@ -45,6 +46,7 @@ import com.blackrook.gui.struct.MathUtils;
  * <p>
  * <b>Track:</b>
  * <table>
+ * <caption>Slider Themes</caption>
  * <tr>
  * 		<td>Horizontal, Enabled</td>
  * 		<td>{@link GUISlider#THEME_KEY_SLIDER_HORIZONTAL_TRACK}</td>
@@ -73,6 +75,7 @@ import com.blackrook.gui.struct.MathUtils;
  * <p>
  * <b>Track Start:</b>
  * <table>
+ * <caption>Slider Themes</caption>
  * <tr>
  * 		<td>Horizontal, Enabled</td>
  * 		<td>{@link GUISlider#THEME_KEY_SLIDER_HORIZONTAL_TRACK_START}</td>
@@ -101,6 +104,7 @@ import com.blackrook.gui.struct.MathUtils;
  * <p>
  * <b>Track End:</b>
  * <table>
+ * <caption>Slider Themes</caption>
  * <tr>
  * 		<td>Horizontal, Enabled</td>
  * 		<td>{@link GUISlider#THEME_KEY_SLIDER_HORIZONTAL_TRACK_END}</td>

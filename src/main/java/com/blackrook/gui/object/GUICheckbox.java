@@ -15,6 +15,7 @@ import com.blackrook.gui.GUIInputConstants;
  * A toggle panel that has its own theme keys depending on its state, checkbox style.
  * <p>
  * <table>
+ * <caption>Checkbox Themes</caption>
  * <tr>
  * 		<td>Checked, Enabled</td>
  * 		<td>{@link GUICheckbox#THEME_KEY_CHECKBOX_ON}</td>
